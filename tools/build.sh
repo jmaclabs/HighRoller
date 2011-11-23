@@ -9,19 +9,21 @@
 # Description:  build script for creating HighRoller
 #               download package
 #
-#   Copyright 2011 John McLaughlin
+# Licensed to Gravity.com under one or more contributor license agreements.
+# See the NOTICE file distributed with this work for additional information
+# regarding copyright ownership.  Gravity.com licenses this file to you use
+# under the Apache License, Version 2.0 (the License); you may not this
+# file except in compliance with the License.  You may obtain a copy of the
+# License at
 #
-#   Licensed under the Apache License, Version 2.0 (the "License");
-#   you may not use this file except in compliance with the License.
-#   You may obtain a copy of the License at
+#   http://www.apache.org/licenses/LICENSE-2.0
 #
-#       http://www.apache.org/licenses/LICENSE-2.0
-#
-#   Unless required by applicable law or agreed to in writing, software
-#   distributed under the License is distributed on an "AS IS" BASIS,
-#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#   See the License for the specific language governing permissions and
-#   limitations under the License.
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an AS IS BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# 
 # --------------------------------------------------------
 
 # ---- TEST FOR USER PROVIDED VERSION
@@ -34,7 +36,7 @@ then
   exit
 else
   echo
-  echo "\tHighRoller Packager...started..."
+  echo "\tHighRoller Packager...building..."
   echo
 fi
 
@@ -60,13 +62,14 @@ echo " * File:         HighRoller.php" >> ../build/HighRoller_$VERSION/HighRolle
 echo " * Date:         $DATE" >> ../build/HighRoller_$VERSION/HighRoller.php
 echo " * Version:      $VERSION" >> ../build/HighRoller_$VERSION/HighRoller.php
 echo " *" >> ../build/HighRoller_$VERSION/HighRoller.php
-echo " * Copyright $CR John McLaughlin" >> ../build/HighRoller_$VERSION/HighRoller.php
+echo " * Licensed to Gravity.com under one or more contributor license agreements." >> ../build/HighRoller_$VERSION/HighRoller.php
+echo " * See the NOTICE file distributed with this work for additional information" >> ../build/HighRoller_$VERSION/HighRoller.php
+echo " * regarding copyright ownership.  Gravity.com licenses this file to you use" >> ../build/HighRoller_$VERSION/HighRoller.php
+echo " * under the Apache License, Version 2.0 (the "License"); you may not this" >> ../build/HighRoller_$VERSION/HighRoller.php
+echo " * file except in compliance with the License.  You may obtain a copy of the" >> ../build/HighRoller_$VERSION/HighRoller.php
+echo " * License at " >> ../build/HighRoller_$VERSION/HighRoller.php
 echo " *" >> ../build/HighRoller_$VERSION/HighRoller.php
-echo " * Licensed under the Apache License, Version 2.0 (the "License");" >> ../build/HighRoller_$VERSION/HighRoller.php
-echo " * you may not use this file except in compliance with the License." >> ../build/HighRoller_$VERSION/HighRoller.php
-echo " * You may obtain a copy of the License at" >> ../build/HighRoller_$VERSION/HighRoller.php
-echo " *" >> ../build/HighRoller_$VERSION/HighRoller.php
-echo " *     http://www.apache.org/licenses/LICENSE-2.0" >> ../build/HighRoller_$VERSION/HighRoller.php
+echo " *    http://www.apache.org/licenses/LICENSE-2.0" >> ../build/HighRoller_$VERSION/HighRoller.php
 echo " *" >> ../build/HighRoller_$VERSION/HighRoller.php
 echo " * Unless required by applicable law or agreed to in writing, software" >> ../build/HighRoller_$VERSION/HighRoller.php
 echo " * distributed under the License is distributed on an "AS IS" BASIS," >> ../build/HighRoller_$VERSION/HighRoller.php

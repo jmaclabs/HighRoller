@@ -1,12 +1,13 @@
-# HighRoller - PHP Wrapper for the Highcharts JS Library
+# HighRoller - Object-oriented PHP Wrapper for the Highcharts JavaScript Library
 
-HighRoller gets Highcharts JS up and running in your PHP project fast.  
+HighRoller gets Highcharts up and running in your PHP project fast.
 
 * HighRoller [Home Page](http://highroller.io)
+* Gravity [Home Page](http://gravity.com)
 
 ## Features
 
-* Compatible with Highcharts JS v2.1.6 (and higher)
+* Compatible with Highcharts v2.1.6 (and higher)
 * Supports all default Highchart JS chart types:
   * Area
   * AreaSpline
@@ -17,9 +18,9 @@ HighRoller gets Highcharts JS up and running in your PHP project fast.
   * Scatter
   * Spline
 * Supports jquery and mootools
-* Support for setting the location of your Highcharts JS library and theme
+* Support for setting the location of your Highcharts library and theme
 * Includes Auto-stepping for xAxis labels
-* Supports Highcharts JS formatters using native JS
+* Supports Highcharts formatters using native JS
 
 ## Examples
 
@@ -62,7 +63,7 @@ A most humble line chart...
 
     <?php echo $linechart->renderChart('mootools');?>
 
-### Fully Customized Multi-series Line Chart
+### Extremely Customized Multi-series Line Chart
 
 A very customised example using dates for xAxis labels, autostep, a custom Highcharts theme and native javascript formatters.
 
@@ -204,7 +205,7 @@ A very customised example using dates for xAxis labels, autostep, a custom Highc
 ## Dependencies
 
 * PHP 5.3.x
-* Highcharts JS 2.1.6 (which has it's own dependencies, like jQuery or MooTools)
+* Highcharts 2.1.6 (which has it's own dependencies, like jQuery or MooTools)
 
 ## Installation
 
@@ -216,36 +217,54 @@ Installation is easy:
 * Set an include path to the HighRoller folder
 * What the...what are you waiting for? Go!
 
-## Roll your own, HighRoller!
+## Roll your own!
 
 Building and testing your own HighRoller release is a snap:
 
-* Clone or download this project to your local PHP-enabled dev workstation
-* Modify the contents of the /src directory to your needs/liking
+* Get - Clone or download this project to your local PHP-enabled dev workstation
+* Config - Create a new vhost in your local web server and set the document root to the /test folder
+* Dev - Modify the contents of the /src directory to your needs/liking
 * Build - Execute the build.sh script to create your release (i.e. ./build.sh 1.0.1)
-* Create a new vhost in your local web server and set the document root to the /test folder
-* Test - Point your browser to that new vhost and test/verify your changes.
-* Everything look good? Sweet!  Install your own HighRoller!
+  * NOTE: executing the build.sh script with the same version overwrites that release.
+* Test - Point your browser to that new vhost and test/verify your changes using the mini-site.
+* Release - Everything looks good?  Sweet!  Install your own HighRoller!
 
-#### NOTE HighRoller's on-board Test Suite requires a web server running locally with a virtual host setup for this project!
+#### NOTE HighRoller's on-board Test Suite requires a web server running locally with a virtual host setup for this project.
 
-## Highcharts JS Licensing
+## Licensing
 
-[Highcharts JS] (http://www.highcharts.com/products/highcharts/) is pretty awesome.
-
-Highcharts is licensed for free for any personal or non-profit projects under the [Creative Commons Attribution-NonCommercial 3.0 License] (http://creativecommons.org/licenses/by-nc/3.0/).
-
-For commercial, corporate or government use a license is required, which can be purchased for as little as $80.
-
-[See the license and pricing details directly on the Highcharts site for more details.] (http://www.highcharts.com/license)
+HighRoller is licensed by Gravity.com under the Apache 2.0 license, see the LICENSE file for more details.
 
 ## About HighRoller
 
-HighRoller is freely available and is released under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+HighRoller was conceived in the summer of 2011.  Some comrades and I had already been integrating Highcharts into a
+PHP project for about 6 months and found ourselves duplicating code, juggling/overwriting theme settings and wrestling
+with data and dates.
 
-* Digger:           John McLaughlin
+It became clear that a wrapper would eliminate all of these problems.  And so, HighRoller was born.
+
+If you find HighRoller useful or have issues please drop me a line, I'd love to hear how you're using it or what features
+should be improved.
+
+HighRoller was open sourced by Gravity.com in 2011
+
+* Lead Digger:      John McLaughlin
 * Contact:          [@jmaclabs](https://twitter.com/#!/JMACLABS)
-* Advisory Cabal:   [@jimplush](https://twitter.com/#!/jimplush) and [@Bluu](https://twitter.com/#!/Bluu)
+* Contributors:     Jim Plush [@jimplush](https://twitter.com/#!/jimplush) and John Kurkowski [@Bluu](https://twitter.com/#!/Bluu)
 
 ### HighRoller begs you to please wager responsibly.
+
+## Important Note About Licensing for Highcharts
+
+HighRoller is licensed by Gravity.com.  HighRoller comes with a copy of Highcharts.
+
+Highcharts is licensed by Highsoft Solutions AS and can be obtained here:
+
+[http://www.highcharts.com/products/highcharts] (http://www.highcharts.com/products/highcharts).
+
+Highcharts is licensed for free for any personal or non-profit projects under the [Creative Commons Attribution-NonCommercial
+3.0 License] (http://creativecommons.org/licenses/by-nc/3.0/).
+
+[See the license and pricing details directly on the Highcharts.com site for more details.] (http://www.highcharts.com/license)
+
 
