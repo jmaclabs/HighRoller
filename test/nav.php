@@ -24,5 +24,5 @@
 ?>
 
 <div class="nav">
-  <a href="/">Smoke Test</a> | <a href="/jquery.php">jQuery Test Suite</a> | <a href="/mootools.php">MooTools Test Suite</a> | <a href="/build.php">Build HighRoller</a> | <a href="/hellochartexample.php">Hello HighRoller!</a> | <a href="http://www.highcharts.com/ref/" target="_blank">HighCharts API Reference</a> |
+  <a href="/">Smoke Test</a> | <a href="/jquery.php">jQuery Test Suite</a> | <a href="/mootools.php">MooTools Test Suite</a> | <a href="/build.php">Build HighRoller</a> | <a href="/hellochartexample.php">Hello HighRoller!</a> | <a href="http://highroller.io" target="_blank">HighRoller.io</a> | <a href="http://www.highcharts.com/ref/" target="_blank">HighCharts API Reference</a> |
 </div>

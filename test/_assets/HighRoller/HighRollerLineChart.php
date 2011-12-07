@@ -29,8 +29,6 @@ class HighRollerLineChart extends HighRoller {
     parent::__construct();
 
     $this->chart->type = 'line';
-    $this->chart->alignTicks = true;
-    $this->chart->endOnTick = false;
 
     $this->xAxis = new HighRollerXAxis();
     $this->yAxis = new HighRollerYAxis();

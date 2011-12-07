@@ -68,7 +68,7 @@ h3 { font-size: 15px; line-height:35px; }
 h4 { font-size: 13px; line-height:20px; }
 h5 { font-size: 11px; line-height:15px; }
 
-.logo { width: 105px; height: 65px; }
+.logo { height: 100px; }
 a { cursor: pointer; }
 
 pre { cursor:default; color: #222; font-size: 13px; font-family: "Open Sans", serif; margin: 3px; padding: 3px; }

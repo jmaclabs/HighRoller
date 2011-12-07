@@ -29,15 +29,14 @@ class HighRollerPieChart extends HighRoller {
     parent::__construct();
 
     $this->chart->type = 'pie';
-    $this->chart->animation = array('duration' => 750);
 
     // HighRoller: customized legend
-    $this->legend->layout = 'vertical';
-    $this->legend->align = 'right';
-    $this->legend->verticalAlign = 'top';
+//    $this->legend->layout = 'vertical';
+//    $this->legend->align = 'right';
+//    $this->legend->verticalAlign = 'top';
 
     // HighRoller: enable dataLabels by default for pie chart
-    $this->plotOptions->series->dataLabels->enabled = true;
+//    $this->plotOptions->series->dataLabels->enabled = true;
 
     $this->plotOptions->pie = new HighRollerPlotOptionsByChartType($this->chart->type);
 

@@ -23,7 +23,7 @@
  */
 ?>
 <div class="footer">
-  <div class="center">
-    HighRoller &copy; 2011 John McLaughlin  | <a href="https://github.com/jmaclabs/HighRoller" target="_blank">on GitHub</a> | <a href="http://www.highroller.io/" target="_blank">on the Web</a>
+  <div class="left">
+    HighRoller is licensed by Gravity.com under the Apache 2.0 License | Developed by <a href="http://johnmclaughlin.info">John McLaughlin</a> (<a href="https://twitter.com/#!/JMACLABS" target="_blank">@jmaclabs</a>)  |  <a href="https://github.com/jmaclabs/HighRoller" target="_blank">on GitHub</a> | <a href="http://www.highroller.io/" target="_blank">on the Web</a>
   </div>
 </div>

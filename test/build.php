@@ -76,7 +76,7 @@
 
 <div class="main">
 
-  <img class="logo" src="_assets/red_dice.png"><h1>HighRoller: Build and Test</h1>
+  <img class="logo" src="_assets/dice.png" height="100px"><h1>HighRoller: Build and Test</h1>
 
   <!--  NAVIGATION -->
   <?php require_once('nav.php');?>

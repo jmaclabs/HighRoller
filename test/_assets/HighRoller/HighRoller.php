@@ -3,8 +3,8 @@
  * HighRoller -- PHP wrapper for the popular JS charting library Highcharts
  * Author:       jmaclabs@gmail.com
  * File:         HighRoller.php
- * Date:         Tue Nov 22 18:47:41 PST 2011
- * Version:      1.0.1
+ * Date:         Tue Dec  6 21:01:56 PST 2011
+ * Version:      1.0.2
  *
  * Licensed to Gravity.com under one or more contributor license agreements.
  * See the NOTICE file distributed with this work for additional information
@@ -224,6 +224,80 @@ class HighRollerAnimation {
 ?><?php
 /**
  * Author: jmac
+ * Date: 9/21/11
+ * Time: 8:56 PM
+ * Desc: HighRoller xAxis Labels
+ *
+ * Licensed to Gravity.com under one or more contributor license agreements.
+ * See the NOTICE file distributed with this work for additional information
+ * regarding copyright ownership.  Gravity.com licenses this file to you use
+ * under the Apache License, Version 2.0 (the License); you may not this
+ * file except in compliance with the License.  You may obtain a copy of the
+ * License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an AS IS BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+
+class HighRollerAxisLabel {
+
+  public $align = "center";
+  public $step = null;
+  public $style;
+
+  function __construct(){
+    $this->style = new HighRollerStyle();
+    $this->style->color = "#6D869F";
+    $this->style->fontWeight = "bold";
+  }
+
+}
+?><?php
+/**
+ * Author: jmac
+ * Date: 9/21/11
+ * Time: 1:10 PM
+ * Desc: HighRoller xAxis Class
+ *
+ * Licensed to Gravity.com under one or more contributor license agreements.
+ * See the NOTICE file distributed with this work for additional information
+ * regarding copyright ownership.  Gravity.com licenses this file to you use
+ * under the Apache License, Version 2.0 (the License); you may not this
+ * file except in compliance with the License.  You may obtain a copy of the
+ * License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an AS IS BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+
+class HighRollerAxisTitle {
+
+  public $align = "middle";
+  public $text = null;
+  public $style;
+
+  function __construct(){
+    $this->style = new HighRollerStyle();
+    $this->style->fontWeight = "bold";
+    $this->style->color = "#6D869F";
+  }
+
+}
+?><?php
+/**
+ * Author: jmac
  * Date: 9/23/11
  * Time: 5:32 PM
  * Desc: HighRoller Background Color Options
@@ -369,11 +443,12 @@ class HighRollerBarPlotOptions {
 
 class HighRollerChart {
 
-  public $type;
+  public $alignTicks = true;
+  public $type = 'line';
   public $renderTo;
-  public $height;
-  public $width;
-  public $marginTop;
+  public $height = null;
+  public $width = null;
+  public $marginTop = null;
   public $marginRight;
   public $marginBottom;
   public $marginLeft;
@@ -389,30 +464,32 @@ class HighRollerChart {
 
   function __construct(){
 
-    $this->type = 'line';             // highcharts chart type obj defaults to line, but, let's set it anyway
+    $this->type = 'line';         // highcharts chart type obj defaults to line, but, let's set it anyway
     $this->renderTo = 'mychart';
-    $this->height = 300;
-    $this->width = 400;
+    $this->height = null;         // was 300
+    $this->width = null;          // was 400
 
-    $this->marginTop = 60;
-    $this->marginLeft = 80;
-    $this->marginRight = 40;
-    $this->marginBottom = 80;
+    $this->alignTicks = true;
 
-    $this->spacingTop = 10;
-    $this->spacingLeft = 40;
-    $this->spacingRight = 20;
-    $this->spacingBottom = 15;
+    $this->marginTop = null;      // 60
+    $this->marginLeft = 80;       // highcharts default
+    $this->marginRight = 50;      // 50
+    $this->marginBottom = 70;     // 80
 
-    $this->borderWidth = 1;
-    $this->borderColor = '#eee';
-    $this->borderRadius = 8;
+    $this->spacingTop = 10;       // highcharts default
+    $this->spacingLeft = 10;      // 40
+    $this->spacingRight = 10;     // 20
+    $this->spacingBottom = 15;    // highcharts default
+
+    $this->borderWidth = 0;       // highcharts default
+    $this->borderColor = '#4572A7';     // highcharts default
+    $this->borderRadius = 5;      // highcharts default
 
     $this->backgroundColor = new HighRollerBackgroundColorOptions();
 
     $this->animation = new HighRollerChartAnimation();
 
-    $this->shadow = true;
+    $this->shadow = false;         // true
   }
 
 }
@@ -444,10 +521,12 @@ class HighRollerChartAnimation {
 
   public $enabled;
   public $duration;
+  public $easing;
 
   function __construct(){
     $this->enabled = true;
-    $this->duration = 750;
+    $this->duration = 500;
+    $this->easing = 'swing';
   }
 
 }
@@ -511,8 +590,9 @@ class HighRollerCredits {
  
 class HighRollerDataLabels {
 
-  public $enabled;
-  public $color;
+  public $enabled = false;
+  public $align = "center";
+  public $color = null;
 
   function __construct(){
     $this->enabled = false;
@@ -546,11 +626,23 @@ class HighRollerDataLabels {
  
 class HighRollerDateTimeLabelFormats {
 
+  public $second;
+  public $minute;
+  public $hour;
   public $day;
-  public $color;
+  public $week;
+  public $month;
+  public $year;
 
   function __construct(){
-    $this->day = '%e of %b';
+    $this->second = '%H:%M:%S';
+    $this->minute = '%H:%M';
+    $this->hour = '%H:%M';
+    $this->day = '%e. %b';
+    $this->week = '%e. %b';
+    $this->month = '%b \'%y';
+    $this->year =  '%Y';
+
   }
 
 }
@@ -647,14 +739,18 @@ class HighRollerFormatter {
 
 class HighRollerLegend {
 
-  public $enabled;
-  public $shadow;
-  public $borderColor;
+  public $align = "center";
+  public $enabled = true;
+  public $shadow = false;
+  public $borderColor = "#909090";
+  public $style;
+  public $backgroundColor;
 
   function __construct(){
-    $this->enabled = true;
-    $this->shadow = true;
-    $this->borderColor = '#eee';
+//    $this->align = "center";
+//    $this->enabled = true;
+//    $this->shadow = true;
+//    $this->borderColor = "#909090";
     $this->style = new HighRollerStyle();
     $this->backgroundColor = new HighRollerBackgroundColorOptions();
   }
@@ -832,18 +928,19 @@ class HighRollerPiePlotOptions {
  
 class HighRollerPlotLines {
 
+  public $color = null;
+  public $dashStyle = "Solid";
+  public $events;
+  public $id = null;
   public $label;
-  public $color;
-  public $width;
-  public $value;
-  public $zIndex;
+  public $value = null;
+  public $width = null;
+  public $zIndex = null;
 
   function __construct(){
-    $this->label = null;
-    $this->color = null;
-    $this->width = null;
-    $this->value = null;
-    $this->zIndex = null;
+    $this->events = array();
+    $this->label = new HighRollerAxisLabel();
+    $this->label->verticalAlign = "top";
   }
 
 }
@@ -877,19 +974,26 @@ class HighRollerPlotOptions {
 
   public $series;
 
-  function __construct(){
+  function __construct($chartType){
 
     // default HighRoller Series PlotOptions
     $this->series = new HighRollerSeriesOptions();
 
-    $this->area = null;
-    $this->areaspline = null;
-    $this->bar = null;
-    $this->column = null;
-    $this->line = null;
-    $this->pie = null;
-    $this->scatter = null;
-    $this->spline = null;
+    if($chartType == 'area'){ $this->area = null; }
+    else if($chartType == 'bar'){ $this->bar = null; }
+    else if($chartType == 'column'){ $this->column = null; }
+    else if($chartType == 'line'){ $this->line = null; }
+    else if($chartType == 'pie'){ $this->pie = null; }
+    else if($chartType == 'scatter'){ $this->scatter = null; }
+    else if($chartType == 'spline'){ $this->spline = null; }
+
+//    $this->areaspline = null;
+//    $this->bar = null;
+//    $this->column = null;
+//    $this->line = null;
+//    $this->pie = null;
+//    $this->scatter = null;
+//    $this->spline = null;
 
   }
 
@@ -920,21 +1024,37 @@ class HighRollerPlotOptions {
 
 class HighRollerPlotOptionsByChartType {
 
+  public $allowPointSelect = false;
+  public $showInLegend = true;
+  public $shadow = true;
+  public $formatter;
+
   function __construct($type){
 
-    if($type == 'pie'){
-      $this->size = '100%';
-      $this->center = array('25%', '60%');
-      $this->allowPointSelect = true;
-      $this->showInLegend = true;
-    } else if($type == 'bar' || $type == 'column'){
+    $this->borderColor = '#FFFFFF';           //#555
+    $this->borderRadius = 0;
+
+    if($type == 'pie' || $type == 'bar' || $type !== 'column'){
+      $this->borderWidth = 1;
+    } else {
       $this->borderWidth = 0;
-      $this->borderColor = '#555';
     }
 
-    $this->shadow = true;
     $this->dataLabels = new HighRollerDataLabels();
 
+    if($type == 'pie'){
+      $this->size = '75%';                    // 100
+      $this->center = array('50%', '50%');    // 25, 65
+      $this->showInLegend = false;            // true
+      $this->dataLabels->align = null;
+      $this->dataLabels->enabled = true;
+      $this->dataLabels->connectorWidth = 1;
+      $this->dataLabels->connectorPadding = 5;
+      $this->dataLabels->distance = 30;
+      $this->dataLabels->softConnector = true;
+    }
+
+    $this->formatter = new HighRollerFormatter();
   }
 
 }
@@ -999,18 +1119,11 @@ class HighRollerSeries {
  
 class HighRollerSeriesOptions {
 
-  public $animation;
-  public $borderRadius;
+  public $animation = true;
   public $dataLabels;
-  public $groupPadding;
-  public $midPointLength;
 
   function __construct(){
-    $this->animation = true;
-    $this->borderRadius = 3;
     $this->dataLabels = new HighRollerDataLabels();
-    $this->groupPadding = 0;
-    $this->midPointLength = 15;
   }
 
 }
@@ -1040,12 +1153,11 @@ class HighRollerSeriesOptions {
  
 class HighRollerStyle {
 
-  public $font;
-  public $color;
+  public $color = "#3E576F";
+
 
   function __construct(){
-    $this->font = null;
-    $this->color = null;
+
   }
 }
 ?><?php
@@ -1074,14 +1186,16 @@ class HighRollerStyle {
 
 class HighRollerTitle {
 
-  public $text;
+  public $align = "middle";
+  public $floating = false;
+  public $text = "Chart Title";
   public $style;
   public $x;
 
   function __construct(){
-    $this->text = null;
     $this->style = new HighRollerStyle();
-    $this->x = 5;
+    $this->style->fontSize = "16px";
+    $this->x = 0;     // 5
   }
   
 }
@@ -1146,17 +1260,21 @@ class HighRollerToolTip {
 
 class HighRollerXAxis {
 
+  public $endOnTick = false;
   public $labels;
   public $title;
-  public $categories;
+  public $categories = array();
   public $dataLabels;
+  public $plotLines = array();    // @TODO instantiating a new plotLines object isn't working, setting as an array
+  public $formatter;
 
   function __construct(){
-    $this->labels= new HighRollerXAxisLabels();
-    $this->title = new HighRollerTitle();
-    $this->categories = array();
-    $this->dataLabels = new HighRollerDataLabels();
+    $this->labels = new HighRollerXAxisLabels();
+    $this->labels->enabled = true;
+    $this->title = new HighRollerAxisTitle();
     $this->dateTimeLabelFormats = new HighRollerDateTimeLabelFormats();
+    $this->plotLines = array();   // @TODO need to revisit why declaring this as an empty class or a hydrated class isn't working
+    $this->formatter = new HighRollerFormatter();
   }
 
 }
@@ -1186,11 +1304,17 @@ class HighRollerXAxis {
  
 class HighRollerXAxisLabels {
 
-  public $enabled;
-  public $step;
+  public $align = "center";
+  public $enabled = true;
+  public $step = null;
+  public $style;
 
   function __construct(){
-    $this->enabled = true;
+
+    $this->style = new HighRollerStyle();
+    $this->style->color = "#6D869F";
+    $this->style->fontWeight = "bold";
+
   }
 
 }
@@ -1222,15 +1346,18 @@ class HighRollerYAxis {
 
   public $title;
   public $labels;
-  public $min;
-  public $max;
-  public $plotLines;
+//  public $min;
+//  public $max;
+  public $plotLines = array();    // @TODO instantiating a new plotLines object isn't working, setting as an array
   public $formatter;
 
   function __construct(){
-    $this->title = new HighRollerTitle();
-    $this->labels = new HighRollerYAxisLabels();
-    $this->plotLines = array();
+    $this->labels = new HighRollerAxisLabel();
+    $this->labels->enabled = true;
+    $this->labels->align = "right";
+    $this->title = new HighRollerAxisTitle();
+    $this->title->margin = 40;
+    $this->plotLines = array();   // @TODO need to revisit why declaring this as an empty class or a hydrated class isn't working    $this->dateTimeLabelFormats = new HighRollerDateTimeLabelFormats();
     $this->formatter = new HighRollerFormatter();
   }
   

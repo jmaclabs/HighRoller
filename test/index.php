@@ -32,6 +32,7 @@
 
   // HighRoller: create and modify Line chart
   $linechart = new HighRollerLineChart();
+
   $linechart->chart->renderTo = 'linechart';
   $linechart->title->text = 'jQuery Line Chart';
 
@@ -76,7 +77,7 @@
 
 <div class="main">
 
-  <img class="logo" src="_assets/red_dice.png"><h1>HighRoller: Smoke Test</h1>
+  <img class="logo" src="_assets/dice.png"><h1>HighRoller: Smoke Test</h1>
 
   <!--  NAVIGATION -->
   <?php require_once('nav.php');?>

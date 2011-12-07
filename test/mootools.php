@@ -117,7 +117,7 @@
 
 <div class="main">
 
-  <img class="logo" src="_assets/red_dice.png"><h1>HighRoller: Chart Gallery using MooTools</h1>
+  <img class="logo" src="_assets/dice.png"><h1>HighRoller: Chart Gallery using MooTools</h1>
 
   <!--  NAVIGATION -->
   <?php require_once('nav.php');?>
