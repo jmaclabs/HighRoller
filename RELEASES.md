@@ -12,3 +12,8 @@
 
 - changes to improve adoption for existing Highcharts users
 - primarily uses Highcharts default settings
+
+## 1.0.3 Even less PHP
+
+- reduced PHP footprint
+- updated hellochartexample and hellochart
