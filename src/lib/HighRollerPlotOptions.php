@@ -26,19 +26,26 @@ class HighRollerPlotOptions {
 
   public $series;
 
-  function __construct(){
+  function __construct($chartType){
 
     // default HighRoller Series PlotOptions
     $this->series = new HighRollerSeriesOptions();
 
-    $this->area = null;
-    $this->areaspline = null;
-    $this->bar = null;
-    $this->column = null;
-    $this->line = null;
-    $this->pie = null;
-    $this->scatter = null;
-    $this->spline = null;
+    if($chartType == 'area'){ $this->area = null; }
+    else if($chartType == 'bar'){ $this->bar = null; }
+    else if($chartType == 'column'){ $this->column = null; }
+    else if($chartType == 'line'){ $this->line = null; }
+    else if($chartType == 'pie'){ $this->pie = null; }
+    else if($chartType == 'scatter'){ $this->scatter = null; }
+    else if($chartType == 'spline'){ $this->spline = null; }
+
+//    $this->areaspline = null;
+//    $this->bar = null;
+//    $this->column = null;
+//    $this->line = null;
+//    $this->pie = null;
+//    $this->scatter = null;
+//    $this->spline = null;
 
   }
 

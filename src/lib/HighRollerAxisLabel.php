@@ -2,8 +2,8 @@
 /**
  * Author: jmac
  * Date: 9/21/11
- * Time: 1:10 PM
- * Desc: HighRoller xAxis Class
+ * Time: 8:56 PM
+ * Desc: HighRoller xAxis Labels
  *
  * Licensed to Gravity.com under one or more contributor license agreements.
  * See the NOTICE file distributed with this work for additional information
@@ -22,23 +22,16 @@
  *
  */
 
-class HighRollerXAxis {
+class HighRollerAxisLabel {
 
-  public $endOnTick = false;
-  public $labels;
-  public $title;
-  public $categories = array();
-  public $dataLabels;
-  public $plotLines = array();    // @TODO instantiating a new plotLines object isn't working, setting as an array
-  public $formatter;
+  public $align = "center";
+  public $step = null;
+  public $style;
 
   function __construct(){
-    $this->labels = new HighRollerXAxisLabels();
-    $this->labels->enabled = true;
-    $this->title = new HighRollerAxisTitle();
-    $this->dateTimeLabelFormats = new HighRollerDateTimeLabelFormats();
-    $this->plotLines = array();   // @TODO need to revisit why declaring this as an empty class or a hydrated class isn't working
-    $this->formatter = new HighRollerFormatter();
+    $this->style = new HighRollerStyle();
+    $this->style->color = "#6D869F";
+    $this->style->fontWeight = "bold";
   }
 
 }

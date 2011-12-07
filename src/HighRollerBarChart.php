@@ -30,14 +30,8 @@ class HighRollerBarChart extends HighRoller {
 
     $this->chart->type = 'bar';
 
-    $this->chart->alignTicks = true;
-    $this->chart->endOnTick = false;
-
     $this->xAxis = new HighRollerXAxis();
     $this->yAxis = new HighRollerYAxis();
-
-    $this->plotOptions->bar->borderWidth = 0;
-    $this->plotOptions->bar->borderColor = '#555';
 
     $this->plotOptions->bar = new HighRollerPlotOptionsByChartType($this->chart->type);
 

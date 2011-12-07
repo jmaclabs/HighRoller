@@ -26,10 +26,12 @@ class HighRollerChartAnimation {
 
   public $enabled;
   public $duration;
+  public $easing;
 
   function __construct(){
     $this->enabled = true;
-    $this->duration = 750;
+    $this->duration = 500;
+    $this->easing = 'swing';
   }
 
 }

@@ -24,12 +24,11 @@
  
 class HighRollerStyle {
 
-  public $font;
-  public $color;
+  public $color = "#3E576F";
+
 
   function __construct(){
-    $this->font = null;
-    $this->color = null;
+
   }
 }
 ?>

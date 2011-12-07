@@ -24,8 +24,9 @@
  
 class HighRollerDataLabels {
 
-  public $enabled;
-  public $color;
+  public $enabled = false;
+  public $align = "center";
+  public $color = null;
 
   function __construct(){
     $this->enabled = false;

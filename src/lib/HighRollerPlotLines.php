@@ -24,18 +24,19 @@
  
 class HighRollerPlotLines {
 
+  public $color = null;
+  public $dashStyle = "Solid";
+  public $events;
+  public $id = null;
   public $label;
-  public $color;
-  public $width;
-  public $value;
-  public $zIndex;
+  public $value = null;
+  public $width = null;
+  public $zIndex = null;
 
   function __construct(){
-    $this->label = null;
-    $this->color = null;
-    $this->width = null;
-    $this->value = null;
-    $this->zIndex = null;
+    $this->events = array();
+    $this->label = new HighRollerAxisLabel();
+    $this->label->verticalAlign = "top";
   }
 
 }

@@ -24,18 +24,11 @@
  
 class HighRollerSeriesOptions {
 
-  public $animation;
-  public $borderRadius;
+  public $animation = true;
   public $dataLabels;
-  public $groupPadding;
-  public $midPointLength;
 
   function __construct(){
-    $this->animation = true;
-    $this->borderRadius = 3;
     $this->dataLabels = new HighRollerDataLabels();
-    $this->groupPadding = 0;
-    $this->midPointLength = 15;
   }
 
 }
