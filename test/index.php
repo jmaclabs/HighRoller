@@ -87,7 +87,7 @@
     <p>
       <ul>
         <li>This page attempts to load 2 default Highcharts line charts using HighRoller.</li>
-        <li>One is rendered using <strong>jQUery</strong> and the other using <strong>MooTools</strong>.</li>
+        <li>One is rendered using <strong>jQuery</strong> and the other using <strong>MooTools</strong>.</li>
         <li>The charts are rendered using identical sample data along with the default sizes, styles and options as defined by HighRoller.</li>
       </ul>
     </p>
