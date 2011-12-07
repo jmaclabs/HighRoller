@@ -24,12 +24,8 @@
  
 class HighRollerBackgroundColorOptions {
 
-  public $linearGradient;
-  public $stops;
-  
   function __construct(){
-    $this->linearGradient = array();
-    $this->stops = array();
+
   }
   
 }

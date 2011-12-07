@@ -32,7 +32,6 @@
 
   // HighRoller: create and modify Line chart
   $linechart = new HighRollerLineChart();
-
   $linechart->chart->renderTo = 'linechart';
   $linechart->title->text = 'jQuery Line Chart';
 
@@ -106,11 +105,12 @@
       <p>Once all Test Suites pass, you can assume your custom build of HighRoller (.zip located the /releases folder) is stable for use/release.</p>
     </p>
 
-    <div style="display: block; float: left; width:100%">
-      <div id="linechart" style="display: inline-block; float: left;"></div>
-      <div id="linechart2" style="display: inline-block; float: left;"></div>
-    </div>
+    <div class="clear"></div>
 
+    <div id="linechart" style="display: block; float: left; width:90%; margin-bottom: 20px;"></div>
+    <div class="clear"></div>
+
+    <div id="linechart2" style="display: block; float: left; width:90%; margin-bottom: 20px;"></div>
     <div class="clear"></div>
 
     <script type="text/javascript">

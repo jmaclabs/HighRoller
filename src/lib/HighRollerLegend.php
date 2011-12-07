@@ -24,20 +24,11 @@
 
 class HighRollerLegend {
 
-  public $align = "center";
-  public $enabled = true;
-  public $shadow = false;
-  public $borderColor = "#909090";
   public $style;
-  public $backgroundColor;
+  public $backgroundColor = null;
 
   function __construct(){
-//    $this->align = "center";
-//    $this->enabled = true;
-//    $this->shadow = true;
-//    $this->borderColor = "#909090";
     $this->style = new HighRollerStyle();
-    $this->backgroundColor = new HighRollerBackgroundColorOptions();
   }
 
 }

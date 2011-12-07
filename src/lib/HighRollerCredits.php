@@ -24,10 +24,8 @@
 
 class HighRollerCredits {
 
-  public $enabled;
-
   function __construct(){
-    $this->enabled = false;
+
   }
 
 }

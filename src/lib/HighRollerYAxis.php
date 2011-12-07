@@ -24,19 +24,14 @@
  
 class HighRollerYAxis {
 
-  public $title;
   public $labels;
-//  public $min;
-//  public $max;
+  public $title;
   public $plotLines = array();    // @TODO instantiating a new plotLines object isn't working, setting as an array
   public $formatter;
 
   function __construct(){
     $this->labels = new HighRollerAxisLabel();
-    $this->labels->enabled = true;
-    $this->labels->align = "right";
     $this->title = new HighRollerAxisTitle();
-    $this->title->margin = 40;
     $this->plotLines = array();   // @TODO need to revisit why declaring this as an empty class or a hydrated class isn't working    $this->dateTimeLabelFormats = new HighRollerDateTimeLabelFormats();
     $this->formatter = new HighRollerFormatter();
   }

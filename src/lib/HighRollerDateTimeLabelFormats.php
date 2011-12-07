@@ -24,22 +24,7 @@
  
 class HighRollerDateTimeLabelFormats {
 
-  public $second;
-  public $minute;
-  public $hour;
-  public $day;
-  public $week;
-  public $month;
-  public $year;
-
   function __construct(){
-    $this->second = '%H:%M:%S';
-    $this->minute = '%H:%M';
-    $this->hour = '%H:%M';
-    $this->day = '%e. %b';
-    $this->week = '%e. %b';
-    $this->month = '%b \'%y';
-    $this->year =  '%Y';
 
   }
 

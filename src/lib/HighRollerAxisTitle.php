@@ -24,14 +24,10 @@
 
 class HighRollerAxisTitle {
 
-  public $align = "middle";
-  public $text = null;
   public $style;
 
   function __construct(){
     $this->style = new HighRollerStyle();
-    $this->style->fontWeight = "bold";
-    $this->style->color = "#6D869F";
   }
 
 }

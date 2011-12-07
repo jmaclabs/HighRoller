@@ -34,6 +34,7 @@
   $linechart = new HighRollerLineChart();
   $linechart->chart->renderTo = 'linechart';
   $linechart->title->text = 'Line Chart';
+  $linechart->yAxis->title->text = 'Total';
 
   // HighRoller: create new series data object and hydrate with precious data
   $series1 = new HighRollerSeriesData();
@@ -41,9 +42,6 @@
 
   // HighRoller: add series data object to chart object
   $linechart->addSeries($series1);
-
-  // HighRoller: next comes the HTML markup
-
 ?>
 
 <head>
@@ -109,6 +107,7 @@
       $linechart = new HighRollerLineChart();
       $linechart->chart->renderTo = 'linechart';
       $linechart->title->text = 'HighRoller Line Chart';
+      $linechart->yAxis->title->text = 'Total';
 
       // HighRoller: create and set Series data
       $series1 = new HighRollerSeriesData();
@@ -200,7 +199,8 @@
           <pre class="phpCode" style="display:block;">// HighRoller: create and modify Line chart
     $linechart = new HighRollerLineChart();
     $linechart->chart->renderTo = 'linechart';
-    $linechart->title->text = 'HighRoller Line Chart';</pre>
+    $linechart->title->text = 'HighRoller Line Chart';
+    $linechart->yAxis->title->text = 'Total';</pre>
         </div>
         <div class="subsection">
           <h5>Create a Series Data Object</h5>

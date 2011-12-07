@@ -24,36 +24,11 @@
 
 class HighRollerPlotOptionsByChartType {
 
-  public $allowPointSelect = false;
-  public $showInLegend = true;
-  public $shadow = true;
+  public $dataLabels;
   public $formatter;
 
   function __construct($type){
-
-    $this->borderColor = '#FFFFFF';           //#555
-    $this->borderRadius = 0;
-
-    if($type == 'pie' || $type == 'bar' || $type !== 'column'){
-      $this->borderWidth = 1;
-    } else {
-      $this->borderWidth = 0;
-    }
-
     $this->dataLabels = new HighRollerDataLabels();
-
-    if($type == 'pie'){
-      $this->size = '75%';                    // 100
-      $this->center = array('50%', '50%');    // 25, 65
-      $this->showInLegend = false;            // true
-      $this->dataLabels->align = null;
-      $this->dataLabels->enabled = true;
-      $this->dataLabels->connectorWidth = 1;
-      $this->dataLabels->connectorPadding = 5;
-      $this->dataLabels->distance = 30;
-      $this->dataLabels->softConnector = true;
-    }
-
     $this->formatter = new HighRollerFormatter();
   }
 

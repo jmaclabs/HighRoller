@@ -34,6 +34,7 @@ $chartData = array(5324, 7534, 6234, 7234, 8251, 10324);
 $linechart = new HighRollerLineChart();
 $linechart->chart->renderTo = 'linechart';
 $linechart->title->text = 'Line Chart';
+$linechart->yAxis->title->text = 'Total';
 
 // HighRoller: create new series data object and hydrate with precious data
 $series1 = new HighRollerSeriesData();
@@ -41,8 +42,6 @@ $series1->addName('myData')->addData($chartData);
 
 // HighRoller: add series data object to chart object
 $linechart->addSeries($series1);
-
-// HighRoller: next comes the HTML markup
 ?>
 
 <head>

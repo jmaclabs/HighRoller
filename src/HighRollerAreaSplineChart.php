@@ -25,18 +25,11 @@
 class HighRollerAreaSplineChart extends HighRoller {
 
   function __construct(){
-
     parent::__construct();
-
     $this->chart->type = 'areaspline';
-    $this->chart->alignTicks = true;
-    $this->chart->endOnTick = false;
-
     $this->xAxis = new HighRollerXAxis();
     $this->yAxis = new HighRollerYAxis();
-
     $this->plotOptions->areaspline = new HighRollerPlotOptionsByChartType($this->chart->type);
-
   }
 
 }

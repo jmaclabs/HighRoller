@@ -24,7 +24,6 @@
  
 class HighRollerSeriesOptions {
 
-  public $animation = true;
   public $dataLabels;
 
   function __construct(){

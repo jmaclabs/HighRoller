@@ -24,20 +24,16 @@
 
 class HighRollerXAxis {
 
-  public $endOnTick = false;
   public $labels;
   public $title;
   public $categories = array();
-  public $dataLabels;
   public $plotLines = array();    // @TODO instantiating a new plotLines object isn't working, setting as an array
   public $formatter;
 
   function __construct(){
     $this->labels = new HighRollerXAxisLabels();
-    $this->labels->enabled = true;
     $this->title = new HighRollerAxisTitle();
     $this->dateTimeLabelFormats = new HighRollerDateTimeLabelFormats();
-    $this->plotLines = array();   // @TODO need to revisit why declaring this as an empty class or a hydrated class isn't working
     $this->formatter = new HighRollerFormatter();
   }
 

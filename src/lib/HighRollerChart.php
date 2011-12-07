@@ -24,53 +24,13 @@
 
 class HighRollerChart {
 
-  public $alignTicks = true;
   public $type = 'line';
   public $renderTo;
-  public $height = null;
-  public $width = null;
-  public $marginTop = null;
-  public $marginRight;
-  public $marginBottom;
-  public $marginLeft;
-  public $spacingTop;
-  public $spacingRight;
-  public $spacingLeft;
-  public $borderWidth;
-  public $borderColor;
-  public $borderRadius;
-  public $backgroundColor;
   public $animation;
-  public $shadow;
 
   function __construct(){
-
-    $this->type = 'line';         // highcharts chart type obj defaults to line, but, let's set it anyway
     $this->renderTo = 'mychart';
-    $this->height = null;         // was 300
-    $this->width = null;          // was 400
-
-    $this->alignTicks = true;
-
-    $this->marginTop = null;      // 60
-    $this->marginLeft = 80;       // highcharts default
-    $this->marginRight = 50;      // 50
-    $this->marginBottom = 70;     // 80
-
-    $this->spacingTop = 10;       // highcharts default
-    $this->spacingLeft = 10;      // 40
-    $this->spacingRight = 10;     // 20
-    $this->spacingBottom = 15;    // highcharts default
-
-    $this->borderWidth = 0;       // highcharts default
-    $this->borderColor = '#4572A7';     // highcharts default
-    $this->borderRadius = 5;      // highcharts default
-
-    $this->backgroundColor = new HighRollerBackgroundColorOptions();
-
     $this->animation = new HighRollerChartAnimation();
-
-    $this->shadow = false;         // true
   }
 
 }

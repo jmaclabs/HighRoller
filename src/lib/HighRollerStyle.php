@@ -24,9 +24,6 @@
  
 class HighRollerStyle {
 
-  public $color = "#3E576F";
-
-
   function __construct(){
 
   }

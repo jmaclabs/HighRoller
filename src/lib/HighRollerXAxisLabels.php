@@ -24,17 +24,10 @@
  
 class HighRollerXAxisLabels {
 
-  public $align = "center";
-  public $enabled = true;
-  public $step = null;
   public $style;
 
   function __construct(){
-
     $this->style = new HighRollerStyle();
-    $this->style->color = "#6D869F";
-    $this->style->fontWeight = "bold";
-
   }
 
 }

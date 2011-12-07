@@ -144,35 +144,33 @@
       <p>Once all Test Suites pass, you can assume your custom build of HighRoller (.zip located the /releases folder) is stable for use/release.</p>
     </p>
 
+    <div class="clear"></div>
+
     <!-- HighRoller: chart gallery -->
 
+    <div id="piechart" style="display: block; float: left; width:90%; margin-bottom: 20px;"></div>
     <div class="clear"></div>
 
-    <div style="display: block; float: left; width:100%">
-      <div id="piechart" style="display: inline-block; float: left;"></div>
-      <div id="barchart" style="display: inline-block; float: left;"></div>
-    </div>
-
+    <div id="barchart" style="display: block; float: left; width:90%; margin-bottom: 20px;"></div>
     <div class="clear"></div>
 
-    <div style="display: block; float: left; width:100%">
-      <div id="columnchart" style="display: inline-block; float: left;"></div>
-      <div id="linechart" style="display: inline-block; float: left;"></div>
-    </div>
-
+    <div id="columnchart" style="display: block; float: left; width:90%; margin-bottom: 20px;"></div>
     <div class="clear"></div>
 
-    <div style="display: block; float: left; width:100%">
-      <div id="splinechart" style="display: inline-block; float: left;"></div>
-      <div id="areachart" style="display: inline-block; float: left;"></div>
-    </div>
-
+    <div id="linechart" style="display: block; float: left; width:90%; margin-bottom: 20px;"></div>
     <div class="clear"></div>
 
-    <div style="display: block; float: left; width:100%">
-      <div id="areasplinechart" style="display: inline-block; float: left;"></div>
-      <div id="scatterchart" style="display: inline-block; float: left;"></div>
-    </div>
+    <div id="splinechart" style="display: block; float: left; width:90%; margin-bottom: 20px;"></div>
+    <div class="clear"></div>
+
+    <div id="areachart" style="display: block; float: left; width:90%; margin-bottom: 20px;"></div>
+    <div class="clear"></div>
+
+    <div id="areasplinechart" style="display: block; float: left; width:90%; margin-bottom: 20px;"></div>
+    <div class="clear"></div>
+
+    <div id="scatterchart" style="display: block; float: left; width:90%; margin-bottom: 20px;"></div>
+    <div class="clear"></div>
 
     <script type="text/javascript">
       // highroller: simplest example of rendering each basic highcharts chart

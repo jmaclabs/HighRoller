@@ -24,11 +24,10 @@
  
 class HighRollerToolTip {
 
-  public $backgroundColor;
+  public $backgroundColor = null;
 
   function __construct(){
 
-    $this->backgroundColor = new HighRollerBackgroundColorOptions();
   }
 
 }

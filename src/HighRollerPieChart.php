@@ -25,21 +25,9 @@
 class HighRollerPieChart extends HighRoller {
 
   function __construct(){
-
     parent::__construct();
-
     $this->chart->type = 'pie';
-
-    // HighRoller: customized legend
-//    $this->legend->layout = 'vertical';
-//    $this->legend->align = 'right';
-//    $this->legend->verticalAlign = 'top';
-
-    // HighRoller: enable dataLabels by default for pie chart
-//    $this->plotOptions->series->dataLabels->enabled = true;
-
     $this->plotOptions->pie = new HighRollerPlotOptionsByChartType($this->chart->type);
-
   }
 
 }

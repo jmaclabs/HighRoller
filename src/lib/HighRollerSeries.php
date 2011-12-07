@@ -24,12 +24,7 @@
 
 class HighRollerSeries {
 
-  public $data;
-  public $name;
-
   function __construct(){
-    $this->name = '';
-    $this->data = '';
   }
 
 }

@@ -24,16 +24,10 @@
 
 class HighRollerTitle {
 
-  public $align = "middle";
-  public $floating = false;
-  public $text = "Chart Title";
   public $style;
-  public $x;
 
   function __construct(){
     $this->style = new HighRollerStyle();
-    $this->style->fontSize = "16px";
-    $this->x = 0;     // 5
   }
   
 }
