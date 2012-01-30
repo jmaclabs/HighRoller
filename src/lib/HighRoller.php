@@ -25,21 +25,19 @@
 class HighRoller {
 
   public $chart;
-  public $credits;
   public $title;
-  public $legend;
-  public $tooltip;
-  public $plotOptions;
+//  public $legend;
+//  public $tooltip;
+//  public $plotOptions;
   public $series = array();
 
   function __construct(){
 
     $this->chart = new HighRollerChart();
-    $this->credits = new HighRollerCredits();
     $this->title = new HighRollerTitle();
-    $this->legend = new HighRollerLegend();
-    $this->tooltip = new HighRollerToolTip();
-    $this->plotOptions = new HighRollerPlotOptions($this->chart->type);
+//    $this->legend = new HighRollerLegend();
+//    $this->tooltip = new HighRollerToolTip();
+//    $this->plotOptions = new HighRollerPlotOptions($this->chart->type);
     $this->series = new HighRollerSeries();
 
   }

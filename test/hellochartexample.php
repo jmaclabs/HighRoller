@@ -77,7 +77,7 @@
         <div id="linechart" style="display: block;"></div>
       </div>
 
-      <div style="display: inline-block; position: relative; float: left;width: 40%;">
+      <div style="display: inline-block; position: relative; float: left; width: 40%; margin-left:10px">
         <h4>Description</h4>
         <p>This is the "Hello World!" example for implementing a Highcharts line chart using HighRoller.</p>
         <p>In this example, PHP, HTML and JavaScript markup are contained in a single file.</p>
@@ -106,7 +106,7 @@
       // HighRoller: create and modify Line chart
       $linechart = new HighRollerLineChart();
       $linechart->chart->renderTo = 'linechart';
-      $linechart->title->text = 'HighRoller Line Chart';
+      $linechart->title->text = 'Line Chart';
       $linechart->yAxis->title->text = 'Total';
 
       // HighRoller: create and set Series data
@@ -199,7 +199,7 @@
           <pre class="phpCode" style="display:block;">// HighRoller: create and modify Line chart
     $linechart = new HighRollerLineChart();
     $linechart->chart->renderTo = 'linechart';
-    $linechart->title->text = 'HighRoller Line Chart';
+    $linechart->title->text = 'Line Chart';
     $linechart->yAxis->title->text = 'Total';</pre>
         </div>
         <div class="subsection">

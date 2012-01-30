@@ -24,10 +24,10 @@
 
 class HighRollerTitle {
 
-  public $style;
+  public $text;
 
   function __construct(){
-    $this->style = new HighRollerStyle();
+    $this->text = null;
   }
   
 }

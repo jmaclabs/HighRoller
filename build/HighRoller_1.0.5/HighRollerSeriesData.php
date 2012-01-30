@@ -1,9 +1,9 @@
 <?php
 /**
  * Author: jmac
- * Date: 9/14/11
- * Time: 5:46 PM
- * Desc: HighRoller Spline Chart SubClass
+ * Date: 9/21/11
+ * Time: 1:11 PM
+ * Desc: HighRoller Series Data Class
  *
  * Licensed to Gravity.com under one or more contributor license agreements.
  * See the NOTICE file distributed with this work for additional information
@@ -21,12 +21,30 @@
  * limitations under the License.
  *
  */
+ 
+class HighRollerSeriesData {
 
-class HighRollerSplineChart extends HighRoller {
+  public $name;
+  public $data = array();
+  
+  public function addName($name){
+    $this->name = $name;
+    return $this;
+  }
 
-  function __construct(){
-    parent::__construct();
-    $this->chart->type = 'spline';
+  public function addType($type){
+    $this->type = $type;
+    return $this;
+  }
+
+  public function addData($data){
+    $this->data = $data;
+    return $this;
+  }
+
+  public function addColor($color){
+    $this->color = $color;
+    return $this;
   }
 
 }

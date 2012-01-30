@@ -55,7 +55,7 @@ $linechart->addSeries($series1);
 
 <body>
 <!-- HighRoller: linechart div container -->
-<div id="linechart"></div>
+<div id="linechart" style="width: 64%;"></div>
 
 <!-- HighRoller: renderChart() method generates new Highcarts object inside script tag -->
 <script type="text/javascript">

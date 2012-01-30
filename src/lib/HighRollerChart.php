@@ -24,13 +24,12 @@
 
 class HighRollerChart {
 
-  public $type = 'line';
   public $renderTo;
-  public $animation;
+//  public $animation;
 
   function __construct(){
-    $this->renderTo = 'mychart';
-    $this->animation = new HighRollerChartAnimation();
+    $this->renderTo = null;
+//    $this->animation = new HighRollerChartAnimation();
   }
 
 }
