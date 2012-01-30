@@ -1,11 +1,11 @@
 <?php
 /**
  * Author: jmac
- * Date: 9/14/11
- * Time: 5:46 PM
- * Desc: HighRoller Pie Chart SubClass
+ * Date: 9/23/11
+ * Time: 5:32 PM
+ * Desc: HighRoller Background Color Options
  *
- *  Licensed to Gravity.com under one or more contributor license agreements.
+ * Licensed to Gravity.com under one or more contributor license agreements.
  * See the NOTICE file distributed with this work for additional information
  * regarding copyright ownership.  Gravity.com licenses this file to you use
  * under the Apache License, Version 2.0 (the License); you may not this
@@ -21,14 +21,14 @@
  * limitations under the License.
  *
  */
+ 
+class HighRollerBackgroundColors {
 
-class HighRollerPieChart extends HighRoller {
-
+  public $linearGradient;
+  public $stops;
   function __construct(){
-    parent::__construct();
-    $this->chart->type = 'pie';
-    $this->plotOptions->pie = new HighRollerPlotOptionsByChartType($this->chart->type);
-  }
 
+  }
+  
 }
 ?>
