@@ -130,6 +130,7 @@ A very customised example using dates for xAxis labels, autostep, a custom Highc
     $linechart->xAxis->labels->x = 5;
     $linechart->xAxis->labels->y = 20;
     $linechart->xAxis->dataLabels->formatter = new HighRollerFormatter();
+    $linechart->yAxis->labels->formatter = new HighRollerFormatter();
     $linechart->yAxis->min = 0;
     $linechart->yAxis->maxPadding = 0.2;
     $linechart->yAxis->endOnTick = true;
